@@ -2,11 +2,11 @@
   "name": "graphqurl-graphiql",
   "description": "Explore GraphQL APIs with headers",
   "author": "Praveen <praveen@hasura.io>",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "version": "0.2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hasura/graphql-engine"
+    "url": "https://github.com/hasura/graphiql-online"
   },
   "main": "index.js",
   "homepage": "https://hasura.io/",
