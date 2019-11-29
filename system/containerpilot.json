@@ -1,0 +1,9 @@
+{
+  "consul": "{{.SELF_IP}}:8500",
+  "logging": {
+    "level": "INFO",
+    "format": "default",
+    "output": "stdout"
+  },
+  "stopTimeout": 5
+}

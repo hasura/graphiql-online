@@ -1,0 +1,37 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/grqphiql-online-tool
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Docker login
+          command: |
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - run:
+          name: Github authentication
+          command: |
+            echo '{ "github-oauth": {"github.com": "'$GITHUB_TOKEN'"}}' > ./auth.json
+      - run:
+          name: Export image name
+          command: |
+            BRANCH_SANITIZED=$(echo $CIRCLE_BRANCH | tr "/" "-")
+            echo "export IMAGE_TAG=$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$BRANCH_SANITIZED$CIRCLE_TAG" >> $BASH_ENV
+      - run:
+          name: Docker build
+          command: docker build -t $IMAGE_TAG -f Dockerfile .
+      - run:
+          name: Docker push
+          command: docker push $IMAGE_TAG
+
+workflows:
+  version: 2
+  build_and_release:
+    jobs:
+      - build:
+          context: org-global
+          filters:
+            tags:
+              only: /.*/
