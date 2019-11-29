@@ -2,7 +2,9 @@ version: 2
 
 jobs:
   build:
-    working_directory: ~/grqphiql-online-tool
+    working_directory: ~/graphiql-online-tool
+    docker:
+      - image: circleci/node:9.1
     steps:
       - checkout
       - setup_remote_docker
