@@ -1,8 +1,7 @@
-version: 2
+version: 2.1
 
 jobs:
-  build:
-    working_directory: ~/graphiql-online-tool
+  build-n-publish:
     docker:
       - image: circleci/node:9.1
     steps:
@@ -30,7 +29,7 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  build-n-publish:
     jobs:
-      - build:
+      - build-n-publish:
           context: org-global
