@@ -81,6 +81,7 @@ class OneGraphExplorer extends React.Component {
     const { endpoint } = this.props;
     const headers = JSON.parse(JSON.stringify(this.props.headers));
     this.setState({ loading: true });
+    console.log(endpoint);
     fetch(endpoint, {
       method: 'POST',
       headers: getHeadersAsJSON(headers || []),

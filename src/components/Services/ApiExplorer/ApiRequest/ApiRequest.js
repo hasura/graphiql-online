@@ -170,53 +170,7 @@ class ApiRequest extends Component {
       };
 
       return (
-        <CollapsibleToggle
-          title={'GraphQL Endpoint'}
-          isOpen={endpointSectionIsOpen}
-          toggleHandler={toggleHandler}
-          useDefaultTitleStyle
-        >
-          <div
-            id="stickyHeader"
-            className={
-              styles.apiPostRequestWrapper +
-              ' ' +
-              styles.wd100 +
-              ' ' +
-              styles.stickyHeader
-            }
-          >
-            <div className={'col-xs-11 ' + styles.padd_remove}>
-              <div
-                className={
-                  'input-group ' +
-                  styles.inputGroupWrapper +
-                  ' ' +
-                  styles.cursorNotAllowed
-                }
-              >
-                <div className={'input-group-btn ' + styles.inputGroupBtn}>
-                  <button type="button" className={'btn btn-default'}>
-                    {this.props.method}
-                  </button>
-                </div>
-                <input
-                  onChange={this.onUrlChanged}
-                  value={this.props.url || ''}
-                  type="text"
-                  readOnly
-                  className={styles.inputGroupInput + ' form-control '}
-                />
-              </div>
-            </div>
-            <div className={'col-xs-1 ' + styles.padd_remove}>
-              <button onClick={this.changeEndpoint.bind(this)} className={styles.changeEndpoint + ' btn btn-sm btn-small btn-info'}>
-                Change Endpoint
-              </button>
-            </div>
-            <div className={styles.stickySeparator} />
-          </div>
-        </CollapsibleToggle>
+          <a></a>
       );
     };
 

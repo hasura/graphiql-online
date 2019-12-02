@@ -6,6 +6,13 @@ const defaultHeader = [
     isNewHeader: false,
     isDisabled: true,
   },
+  {
+    key: 'Authorization',
+    value: 'Bearer: xxxxxxxxxxxx',
+    isActive: true,
+    isNewHeader: false,
+    isDisabled: false,
+  },
 ];
 defaultHeader.push({
   key: '',
@@ -29,7 +36,7 @@ dataApisContent.push({
   },
   request: {
     method: 'POST',
-    url: getUrl('/v1/graphql'),
+    url: getUrl(),
     headers: defaultHeader,
     bodyType: 'graphql',
     params: JSON.stringify({}, null, 4),
