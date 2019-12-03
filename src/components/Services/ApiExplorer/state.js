@@ -8,8 +8,8 @@ const defaultHeader = [
   },
   {
     key: 'Authorization',
-    value: 'Bearer: xxxxxxxxxxxx',
-    isActive: true,
+    value: 'Bearer xxxxxxxxxxxx',
+    isActive: false,
     isNewHeader: false,
     isDisabled: false,
   },
