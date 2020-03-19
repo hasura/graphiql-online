@@ -10,7 +10,7 @@ import './voyagerView.css';
 
 class VoyagerView extends Component {
   introspectionProvider(query) {
-    const url = window.localStorage.getItem('ONLINE_GRAPHIQL_ENDPOINT');
+    const url = window.__env.graphqlEndpoint;
     const HEADER_FROM_LS = getGraphiQLHeadersFromLocalStorage();
     let parsedHeader = {};
     if (HEADER_FROM_LS) {
