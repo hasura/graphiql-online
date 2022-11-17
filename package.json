@@ -125,7 +125,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
-    "font-awesome-webpack": "0.0.4",
+    "font-awesome-webpack": "0.0.5-beta.2",
     "husky": "^0.14.3",
     "ignore-loader": "^0.1.2",
     "jquery": "^3.4.1",
